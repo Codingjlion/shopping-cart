@@ -1,0 +1,243 @@
+*{
+    padding: 0;
+}
+html    {
+    font-size: 16px;
+    line-height: 1.4px;
+}
+body    {
+            background-color: black;
+        }
+
+
+.navbar {
+    display: inline-flex;
+    height: 76px;
+    width: 1100px;
+    background-color: dimgrey;
+    margin-top: -5px;
+    margin-left: 50px;
+    position:fixed;
+    box-shadow: 0 0 10px 0 rgb(233, 232, 232);
+     
+}
+h1      {
+    width: 500px;
+    margin-top: 22px;
+}
+
+.Docp {
+    margin-top: 15px;
+    font-style: oblique;
+    margin-left: 50px;
+    width: 100%;
+    
+}
+
+.Docp  span   {
+                color: white;
+            }
+ .Docp  span:hover   {
+                color:black
+                }
+
+
+.leo    {
+            text-decoration: none;
+            color: black;
+            font-family: sans-serif;  
+        }
+.leo:hover    { 
+                color: white;
+            }
+
+.navbar    {
+    float: right;
+}
+.navtxt    {
+ float: right;
+ margin-top: -19px;
+ list-style: none;
+ display:flex ;
+ margin-right: 50px;
+ font-style: oblique;
+ font-size: 15px;
+ font-weight: 500;
+ font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+ 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+  'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.Home      {
+    color: black;
+  margin-right: 12px;
+  text-decoration: none;
+}
+.navtxt :hover .Home  {
+            color: white;
+                }
+.Career     {
+    color: black;
+    margin-right: 12px;
+    text-decoration: none;
+}    
+.Career:hover{
+    color: white;
+}    
+
+.dep     {
+    color: white;
+  margin-right: 12px;
+  text-decoration: none;
+}
+.dep:hover {
+
+color:black;
+
+}
+.dep       {
+cursor: pointer;   
+
+}
+/* end of navbar */
+
+.sidebar      {
+            border-radius:5px ;
+            box-shadow: 0 0 10px 0 rgb(233, 232, 232);
+            margin-top: 90px;
+            margin-left: 50px;
+            width: 300px;
+            height: 100%;
+            background-color:dimgrey;
+            position: absolute;
+            position: fixed;
+
+                }
+.search {
+        margin-left: 10px;
+        margin-top: 20px;
+        
+            }
+.search button  {
+            height: 25px;
+            width: 20px;
+            opacity: 0.7;
+            border-radius: 5px;
+            border-style: none;
+            color:white;
+            background-color: black;
+            }
+.search input   {
+                background-color: black;
+                height: 25px;
+                width: 250px;
+                opacity: 0.7;
+                border-radius: 5px;
+                border-style: none;
+                color: white;
+                font-size: 15px;
+                text-align: center;
+            }
+.bar {
+    /* background-color: black; */
+    height:40px ;
+    margin-top:8px;
+    margin-left:0px;
+    width: 300px;
+    /* border-radius: 7px; */
+    /* box-shadow: 0 0 10px 0 black; */
+    }
+.fa-cart-shopping {
+            margin-top: -8px;
+            }
+.bar marquee  {
+            font-style: italic;
+            font-size: 15px; 
+            color:white;
+            height: 20px;
+            width: 300px;
+            line-height: 20px;
+            /* opacity: 0.7; */
+        }
+.Listbar    {
+            opacity: 0.7;
+            height: 400px;
+            width: 250px;
+            background-color: black;
+            margin-top:15px;
+            margin-left:20px;
+            border-radius: 17px;
+            border-style:inherit;
+            border-color: dimgray;
+            box-shadow: 0 0 10px 0 black;
+            }
+.Listbar2    {
+            margin-top:0px;
+            margin-left:20px;
+            height: 300px;
+            width: 200px;
+            position: absolute;
+         }
+.Listbar2 a {
+            color: white;
+            display: grid;
+            line-height: 35px;
+            list-style: none;
+            text-decoration: none;
+            font-size: 20px;
+        }
+.imgdiv     {
+                width: 700px;
+                height: 500px;
+                background-color: dimgray;
+                position: absolute;
+                margin-left: 450px;
+                margin-top: 87px;
+                border-radius:5px ;
+                box-shadow: 0 0 10px 0 rgb(233, 232, 232);
+            }
+.mainimg       {
+                 width: 680px;
+                 height: 480px;
+                 left : 50%;
+                 top : 50;
+                 margin-left: 10px;
+                 margin-top: 7px;
+                 border-radius: 10px;
+                 background-size: 100% 100%;
+                 background-image: url(./WhatsApp\ Image\ 2023-02-06\ at\ 2.07.23\ PM.jpeg);
+                 border-color: dimgray;
+                 box-shadow: 0 0 10px 0 white;
+                 animation:slider 30s infinite linear;
+            }
+
+@keyframes slider {
+
+            5%{background-image: url(./WhatsApp\ Image\ 2023-02-07\ at\ 11.05.04\ AM\ \(2\).jpeg); background-size: 100% 100%;
+            }
+
+            10%{background-image: url(./WhatsApp\ Image\ 2023-02-07\ at\ 11.05.04\ AM\ \(11\).jpeg); background-size: 50% 100%;}
+
+            15%{background-image: url(./WhatsApp\ Image\ 2023-02-07\ at\ 11.05.04\ AM\ \(12\).jpeg); background-size: 100% 100%;
+            }
+
+            20%{background-image: url(./WhatsApp\ Image\ 2023-02-07\ at\ 11.05.04\ AM\ \(13\).jpeg); background-size: 100% 100%;
+            }
+
+            25%{background-image: url(./WhatsApp\ Image\ 2023-02-07\ at\ 11.05.04\ AM\ \(3\).jpeg); background-size: 100% 100%;
+            }
+
+            30%{background-image: url(./WhatsApp\ Image\ 2023-02-07\ at\ 11.05.04\ AM\ \(4\).jpeg); background-size: 100% 100%;}
+
+            35%{background-image: url(./WhatsApp\ Image\ 2023-02-07\ at\ 11.05.04\ AM\ \(5\).jpeg); background-size: 100% 100%;}
+
+            40%{background-image: url(./WhatsApp\ Image\ 2023-02-07\ at\ 11.05.04\ AM\ \(8\).jpeg); background-size: 100% 100%;}
+
+            45%{background-image: url(./WhatsApp\ Image\ 2023-02-07\ at\ 11.05.33\ AM.jpeg); background-size: 100% 100%;}
+
+            100%{background-image: url(./WhatsApp\ Image\ 2023-02-07\ at\ 11.05.04\ AM\ \(1\).jpeg); background-size: 100% 100%;
+            }
+
+            }
+
+
+    
