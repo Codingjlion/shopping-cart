@@ -34,6 +34,7 @@ for(let i = 0; i < cartbtn.length; i++){
         e.preventDefault();
          //console.log("Add to cart");
          cartNumbers(products[i]);
+         totalCost(products[i]);
     })
 }
 
@@ -79,4 +80,48 @@ let setItems = (product) => {
     }
     localStorage.setItem('productIncart', JSON.stringify(cartItems) )
 }
+/** calculating total cost of cart */
+const totalCost = (productCost) => {
+    let cartCost = localStorage.getItem('totalCost');
+
+    if(cartCost != null){
+        cartCost = parseInt(cartCost);
+        localStorage.setItem('totalCost', cartCost + productCost.price);
+    }else {
+        localStorage.setItem('itemCost', productCost.price);
+    }
+}
+/* display products in cart page*/
+const displayCartItems = () => {
+    let cartItems = localStorage.getItem('productInCart');
+
+    cartItems = JSON.parse(cartItems);
+    let productContainer = document.querySelector('.cart-cont');
+    let cartCost = localStorage.getItem('totalCost');
+    if(cartItems && productContainer){
+        productContainer.innerHTML = '';
+        Object.values(cartItems).map(item =>{
+            productContainer.innerHTML +=`
+            <div class="product-items">
+                <div class="product">
+                    <p> &times</p>
+                    <img src="./${item.img}" alt="">
+                    <span>${item.name}</span>
+                </div>
+
+                <div class="price"></div>
+
+                <div class="quantity">
+                    <p>+</p>
+                    <span></span>
+                    <p>-</p>
+                </div>
+                <div class="total">
+                    
+                </div>`;
+
+        })
+    }
+} 
 onLoadCartNumbers()
+displayCartItems()

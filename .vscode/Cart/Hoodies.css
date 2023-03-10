@@ -13,7 +13,6 @@ body    {
 .navbar {
     display: inline-flex;
     height: 76px;
-    z-index: 1;
     width: 1100px;
     background-color: dimgrey;
     margin-top: -5px;
@@ -186,29 +185,12 @@ cursor: pointer;
             text-decoration: none;
             font-size: 20px;
         }
-.cart-cont     {
-                width: 780px;
-                min-height: 200px;
-                z-index: 0;
-                background-color:dimgray;
-                position: absolute;
-                margin-left: 370px;
-                margin-top: 90px;
-                border-radius:5px ;
-                box-shadow: 0 0 10px 0 rgb(233, 232, 232);
-            }
+
 .maincart-cont {
             
             padding: 20px;
-            
-           /* display: flex;
-            grid-template-columns: repeat(auto-fit minmax(20rem,1fr));*/
-            display: grid;
-                        grid-template-columns: 2fr 2fr 2fr 2fr ;
-                        
-                        grid-template-columns: repeat(auto-fill, minmax
-                        (20rem, 1fr));
-
+            display: flex;
+            grid-template-columns: repeat(auto-fit minmax(20rem,1fr));
             }
 .cart-items{
         
@@ -218,11 +200,7 @@ cursor: pointer;
         border-radius: 5px;
         color:white;
         line-height: 6px;
-        
     }
-.cart-items h3 {
-    font-size: 17px;
-}
 .cart-items img {
     width: 120px;
     border-radius: 5px;
@@ -242,7 +220,28 @@ cursor: pointer;
         background-color: aliceblue;
         box-shadow: var(--inner-box-shadow);
 }
+/*....... cart page.......*/
+.cart-cont     {
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    min-width: 1100px;
+    min-height:550px;
+    background-color:dimgray;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 90px;
+    border-radius:5px ;
+    box-shadow: 0 0 10px 0 rgb(233, 232, 232);
+}
+.product-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 2px;
+    box-shadow: var(--inner-box-shadow);
+    border-radius: 5px;
+    align-items: center;
 
 
-
-    
+} 
