@@ -1,4 +1,4 @@
-let cartbtn=document.querySelectorAll(".add-cart");
+let cartBtn=document.querySelectorAll(".add-cart");
 let products = [
     {
     name:'Luxury Hoddie',
@@ -29,10 +29,10 @@ let products = [
     incart:0
 },
 ];
-for(let i = 0; i < cartbtn.length; i++){
-    cartbtn[i].addEventListener('click', (e)=> {
+for (let i = 0; i < cartBtn.length; i++){
+    cartBtn[i].addEventListener('click', (e) => {
         e.preventDefault();
-         //console.log("Add to cart");
+        //  console.log("Add to cart");
          cartNumbers(products[i]);
          totalCost(products[i]);
     })
@@ -41,13 +41,13 @@ for(let i = 0; i < cartbtn.length; i++){
 const onLoadCartNumbers = () =>{
     let productNumbers = localStorage.getItem("cartNumbers");
     if(productNumbers){
-        document.querySelector('cart span').innerHTML = productNumbers
+        document.querySelector('.cart span').innerHTML = productNumbers
     }
 }
 
 // adding products to cart using localstorage
 
-const cartNumbers = (products) =>{
+const cartNumbers = (product) =>{
     let productNumbers = localStorage.getItem("cartNumbers");
     productNumbers= parseInt(productNumbers);
 
@@ -73,7 +73,7 @@ let setItems = (product) => {
         cartItems[product.tag].incart += 1;   
 
     }else{
-        product.incart =1
+        product.incart =1;
         cartItems = {
             [product.tag]: product
         }
@@ -108,9 +108,7 @@ const displayCartItems = () => {
                     <img src="./${item.img}" alt="">
                     <span>${item.name}</span>
                 </div>
-
                 <div class="price"></div>
-
                 <div class="quantity">
                     <p>+</p>
                     <span></span>
@@ -121,7 +119,13 @@ const displayCartItems = () => {
                 </div>`;
 
         })
+	productContainer.innerHTML +=`
+        //             <div class="basketTotalContainer">
+        //                 <h4 class ="basketTotal-title"> Basket Total Price</h4>
+        //                 <h4 class="basket-total">N ${cartCost}.00/-</h4>
+        //             </div>`
     }
 } 
 onLoadCartNumbers()
 displayCartItems()
+
